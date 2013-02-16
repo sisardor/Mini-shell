@@ -1,0 +1,58 @@
+ ============================================================================
+ Name        : minishell.c
+ Author      : Sardor Isakov
+ Version     : v2.0
+ Copyright   : All rights reserved
+ Description : Simple Shell in C, Ansi-style
+ ============================================================================
+ 
+Assignment: [lab3] Extending shell  
+---------- 
+
+
+Description:  
+----------- 
+C implementation of simple shell program.  
+
+
+Included Files:
+--------------
+My assignment solution consists of the following files: 
+- minishell.c 
+- minishell.h 
+- minishellfunc.h 
+- makefile
+
+
+Running my solution: 
+------------------- 
+You can run my assignment as follows: 
+> make run  
+
+
+Compiler:  
+------------ 
+gcc version 4.6.3 (Ubuntu/Linaro 4.6.3-1ubuntu5)
+
+
+Assumptions: 
+----------- 
+My program can't handle background jobs or processes. So you cannot send job to background 
+
+
+Conclusions/Remarks: 
+------------------- 
+I had problems implementing background jobs in simple shell, but i did implemented other
+functionalities like < > | redirections
+
+
+Errors/Bugs: 
+----------- 
+One error I can not fix/find is that sometime you have to type "quit" 2 time to quit
+at it gives no result, after you type "quit" second time minishell quits, this is minor bug,
+but it is still there
+
+
+Additional Tools Used:
+---------------------
+Al libraries were on the Ubuntu installation at stat of the lab
