@@ -48,15 +48,15 @@ void changeDir() {
 // @return boolean
 int checkInternalCommand() {
 
-	if(strcmp("cd", command.argv[0]) == 0) {
+	if(strncmp("cd", command.argv[0],sizeof("cd")) == 0) {
 		changeDir();
 		return 1;
 	}
-	if(strcmp("clear", command.argv[0]) == 0) {
+	if(strncmp("clear", command.argv[0],sizeof("clear")) == 0) {
 		clearScreen();
 		return 1;
 	}
-	if(strcmp("self", command.argv[0]) == 0) {
+	if(strncmp("self", command.argv[0],sizeof("self")) == 0) {
 		clearScreen();
 		return 1;
 	}
@@ -275,7 +275,7 @@ int main(int argc, char* argv[]) {
 		else {
 			readCommand(commandLine, &commandInput); // read command
 
-			if((strcmp(commandLine, "exit") == 0) || (strcmp(commandLine, "quit") == 0))
+			if((strncmp(commandLine, "exit",sizeof(commandLine)) == 0) || (strncmp(commandLine, "quit",sizeof(commandLine)) == 0))
 				break;
 
 			parseCommand(commandLine, &command); //parses command into argv[], argc
